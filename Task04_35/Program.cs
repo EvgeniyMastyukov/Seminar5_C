@@ -3,31 +3,30 @@
 //В своём решении сделайте для 123 [5, 18, 123, 6, 2] -> 1  [1, 2, 3, 6, 2] -> 0
 //[10, 11, 12, 13, 14] -> 5
 
-int [] array = new int [123];
-void FilArray(int [] col )
+int[] array = new int[123];
+void FilArray(int[] col)
 {
     for (int i = 0; i < col.Length; i++)
     {
-       array[i] = new Random().Next(1,150);
+        col[i] = new Random().Next(1, 150);
     }
 }
-void PrintArray(int [] arr)
+void PrintArray(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
         Console.Write($"{arr[i]} ");
     }
 }
-int FindCountNums(int [] arr)
+int FindCountNums(int[] arr)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if(arr[i] > 9 && arr[i] < 100)
+        if (arr[i] > 9 && arr[i] < 100)
         {
             count = count + 1;
         }
-
     }
     return count;
 }
